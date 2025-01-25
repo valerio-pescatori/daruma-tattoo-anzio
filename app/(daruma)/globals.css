@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --base-black: 0, 0, 0;
+  --base-white: 255, 255, 255;
+  --background: 28, 21, 21;
+  --foreground: 73, 12, 31;
+  --accent: 254, 173, 0;
+  --border-light: 114, 112, 112;
+  --border-dark: 97, 95, 95;
+}
+
+body {
+  @apply overflow-x-hidden;
+}
+
+svg {
+  @apply inline-block w-6 h-6;
+}
+
+a {
+  @apply hover:underline align-middle;
+}
+
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-border-dark rounded-lg hover:bg-border-light;
+}
+
+.btn {
+  @apply text-xl px-6 py-2 rounded-lg bg-foreground shadow hover:scale-110 active:scale-95 transition;
+}

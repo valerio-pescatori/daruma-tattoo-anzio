@@ -1,16 +1,7 @@
 import { CollectionConfig } from 'payload';
-import { int, sqliteTable, text } from 'drizzle-orm/sqlite-core';
-
-export const usersTable = sqliteTable('artist', {
-  id: int().primaryKey({ autoIncrement: true }),
-  name: text().notNull(),
-  styles: text().notNull(),
-  description: text().notNull(),
-  email: text().notNull().unique(),
-});
 
 export const Artist: CollectionConfig = {
-  slug: 'artista',
+  slug: 'artist',
   fields: [
     {
       name: 'name',
@@ -33,5 +24,17 @@ export const Artist: CollectionConfig = {
       type: 'email',
       required: true,
     },
+    {
+      name: 'profilePic',
+      type: 'upload',
+      relationTo: 'media',
+    },
+    {
+      name: 'images',
+      type: 'upload',
+      hasMany: true,
+      relationTo: 'media',
+    },
   ],
+  timestamps: false,
 };

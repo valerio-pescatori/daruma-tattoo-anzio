@@ -1,4 +1,0 @@
-.animate-fade-out {
-  animation-timeline: view();
-  animation-range: exit -25vh;
-}

@@ -19,6 +19,9 @@
       }
     ],
     "paths": {
+      "@components/*": ["./src/components/*"],
+      "@app/*": ["./app/(daruma)/*"],
+      "@utils/*": ["./src/utils/*"],
       "@/*": ["./*"],
       "@payload-config": ["./payload.config.ts"]
     }

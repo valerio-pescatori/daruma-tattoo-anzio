@@ -52,19 +52,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="it">
-      <body
-        className={clsx(
-          'bg-background text-base-white h-screen overflow-y-scroll overscroll-y-none pt-16 antialiased',
-          cormorantGaramond.variable,
-          go3v2.variable
-        )}>
+    <html lang="it" className={clsx(cormorantGaramond.variable, go3v2.variable)}>
+      <body className="bg-base-1 bg-gradient-to-[45deg] bg-from-base-1 bg-to-base-2 text-text h-screen overflow-y-scroll overscroll-y-none antialiased">
         {children}
-
-        <button
-          type="button"
-          id="scroll-controller"
-          className="fixed right-4 bottom-8 w-8 h-8 rounded-full bg-border-light border border-border-dark"></button>
       </body>
     </html>
   );

@@ -26,11 +26,15 @@ body {
 }
 
 svg {
-  @apply inline-block w-6 h-6;
+  @apply inline-block h-6 w-6;
 }
 
 a {
-  @apply hover:underline align-middle;
+  @apply align-middle hover:underline;
+}
+
+.lucide {
+  stroke-width: 1px;
 }
 
 ::-webkit-scrollbar {
@@ -42,5 +46,5 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-base-1 rounded-lg hover:bg-overlay;
+  @apply rounded-lg bg-base-1 hover:bg-overlay;
 }

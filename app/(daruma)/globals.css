@@ -1,6 +1,64 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+  --color-*: initial;
+  --color-transparent: transparent;
+  --color-text: rgba(var(--off-white), 1);
+  --color-base-1: rgba(var(--midnight-teal), 1);
+  --color-base-2: rgba(var(--deep-navy-black), 1);
+  --color-overlay: rgba(var(--soft-seafoam-teal), 1);
+  --color-accent: rgba(var(--sage-green), 1);
+  --color-muted-gold: rgba(var(--muted-gold), 1);
+  --color-anthracite-gray: rgba(var(--anthracite-gray), 1);
+
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  --drop-shadow: 0 4px 6px rgba(0, 0, 0, 1);
+
+  --z-index-401: 401;
+
+  --font-sans: var(--font-cormorant-garamond);
+  --font-go3v2: var(--font-go3v2), sans-serif;
+
+  --animate-spin: spin 20s linear infinite;
+  --animate-fade-in: fade-in 0.75s linear forwards;
+  --animate-fade-out: fade-out 0.75s linear forwards;
+
+  --grid-template-columns-layout: 200px 1fr 200px;
+
+  --grid-template-rows-0: 0fr;
+
+  @keyframes fade-out {
+    to {
+      opacity: 0;
+      scale: 200%;
+    }
+  }
+  @keyframes fade-in {
+    to {
+      opacity: 1;
+      transform: translate(0px);
+    }
+  }
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
 
 :root {
   --sage-green: 138, 163, 153;

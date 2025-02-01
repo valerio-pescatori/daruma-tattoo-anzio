@@ -5,9 +5,7 @@ export default function Home() {
   return (
     <div>
       <Hero />
-      <div className="p-8">
-        <Artist />
-      </div>
+      <Artist />
     </div>
   );
 }

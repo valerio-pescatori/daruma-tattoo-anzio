@@ -21,11 +21,9 @@
   --color-muted-gold: rgba(var(--muted-gold), 1);
   --color-anthracite-gray: rgba(var(--anthracite-gray), 1);
 
-  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
-  --drop-shadow: 0 4px 6px rgba(0, 0, 0, 1);
-
   --z-index-401: 401;
+
+  --shadow-inner: inset 0 0 25 0 rgba(0, 0, 0, 0.5);
 
   --font-sans: var(--font-cormorant-garamond);
   --font-go3v2: var(--font-go3v2), sans-serif;

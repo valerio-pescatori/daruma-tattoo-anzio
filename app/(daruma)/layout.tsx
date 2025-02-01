@@ -74,10 +74,7 @@ export default function RootLayout({
     <html lang="it" className={clsx(cormorantGaramond.variable, go3v2.variable)}>
       <body
         style={style}
-        className={clsx(
-          'h-screen overflow-y-scroll overscroll-y-none text-text antialiased',
-          'bg-base-1 bg-cover bg-repeat-y'
-        )}>
+        className={clsx('text-text overflow-y-scroll overscroll-y-none antialiased', 'bg-base-1 bg-cover bg-repeat-y')}>
         {children}
       </body>
     </html>

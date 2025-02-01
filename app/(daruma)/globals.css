@@ -3,15 +3,6 @@
 @tailwind utilities;
 
 :root {
-  --base-black: 0, 0, 0;
-  --base-white: 255, 255, 255;
-  --background: 28, 21, 21;
-  --foreground: 73, 12, 31;
-  --accent: 254, 173, 0;
-  --border-light: 114, 112, 112;
-  --border-dark: 97, 95, 95;
-
-  /* new colors */
   --sage-green: 138, 163, 153;
   --midnight-teal: 0, 28, 38;
   --deep-navy-black: 0, 22, 27;

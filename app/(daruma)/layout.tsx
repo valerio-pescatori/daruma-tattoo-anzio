@@ -2,6 +2,10 @@ import type { Metadata } from 'next';
 import './globals.css';
 import localFont from 'next/font/local';
 import { clsx } from 'clsx';
+import { getImageProps } from 'next/image';
+import { getBackgroundImage } from '@utils/getBackgroundImage';
+import { CSSProperties } from 'react';
+import bgPattern from './assets/images/bg-pattern.png';
 
 const cormorantGaramond = localFont({
   src: [
@@ -51,9 +55,29 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const {
+    props: { srcSet },
+  } = getImageProps({
+    alt: '',
+    width: 393,
+    height: 852,
+    src: bgPattern,
+  });
+  const backgroundImage = getBackgroundImage(srcSet);
+  const style: CSSProperties = {
+    height: '100vh',
+    width: '100vw',
+    backgroundImage: `${backgroundImage}, linear-gradient(to bottom, rgb(var(--midnight-teal)), rgb(var(--deep-navy-black)))`,
+  };
+
   return (
     <html lang="it" className={clsx(cormorantGaramond.variable, go3v2.variable)}>
-      <body className="bg-base-1 bg-gradient-to-[45deg] bg-from-base-1 bg-to-base-2 text-text h-screen overflow-y-scroll overscroll-y-none antialiased">
+      <body
+        style={style}
+        className={clsx(
+          'h-screen overflow-y-scroll overscroll-y-none text-text antialiased',
+          'bg-base-1 bg-cover bg-repeat-y'
+        )}>
         {children}
       </body>
     </html>

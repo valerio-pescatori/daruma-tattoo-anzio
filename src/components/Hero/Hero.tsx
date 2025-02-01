@@ -5,13 +5,14 @@ import { ChevronsDown } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <header className="h-dvh scroll-mt-20 bg-base-1">
+    <header className="bg-base-1 h-svh scroll-mt-20">
       <div className="relative">
-        {/* bg image + shadow */}
-        <Image className="w-full" width={393} height={790} src={heroImage} alt="Immagine di sfondo del locale" />
-        <div id="shadow" className="absolute inset-0 -bottom-px bg-gradient-to-t from-base-1 to-70%" />
+        {/* shadow */}
+        <div id="shadow" className="from-base-1 absolute inset-0 -bottom-px bg-gradient-to-t to-70%" />
+        {/* hero image */}
+        <Image className="size-full" width={393} height={790} src={heroImage} alt="Immagine di sfondo del locale" />
         {/* text */}
-        <div className="absolute left-0 top-[40%] w-full -translate-y-1/2 text-center">
+        <div className="absolute top-[40%] left-0 w-full -translate-y-1/2 text-center">
           <h1 className="font-go3v2 text-5xl drop-shadow">
             Daruma Tattoo <br /> Anzio
           </h1>

@@ -1,4 +1,7 @@
 {
   "biome.enabled": false,
-  "typescript.preferences.importModuleSpecifier": "shortest"
+  "typescript.preferences.importModuleSpecifier": "shortest",
+  "catppuccin-icons.associations.files": {
+    ".barrelsbyrc": "env"
+  }
 }

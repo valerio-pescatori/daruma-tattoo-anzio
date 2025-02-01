@@ -2,10 +2,9 @@ import sharp from 'sharp';
 import { lexicalEditor } from '@payloadcms/richtext-lexical';
 import { sqliteAdapter } from '@payloadcms/db-sqlite';
 import { buildConfig } from 'payload';
-import { Artist } from './db/types/Artist';
 import { normalize, resolve } from 'path';
 import { cwd } from 'process';
-import { Media } from './db/types/Media';
+import { Artist, Media } from '@db/types';
 
 export default buildConfig({
   editor: lexicalEditor(),

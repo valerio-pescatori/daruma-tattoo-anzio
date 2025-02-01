@@ -7,18 +7,21 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "barrels": "barrelsby -c .barrelsbyrc -D"
   },
   "dependencies": {
     "@payloadcms/db-sqlite": "^3.19.0",
-    "@payloadcms/next": "^3.19.0",
-    "@payloadcms/richtext-lexical": "^3.19.0",
+    "@payloadcms/next": "^3.20.0",
+    "@payloadcms/richtext-lexical": "^3.20.0",
+    "barrelsby": "^2.8.1",
     "clsx": "^2.1.1",
     "drizzle-orm": "^0.38.4",
+    "embla-carousel-react": "^8.5.2",
     "graphql": "^16.10.0",
     "lucide-react": "^0.474.0",
     "next": "15.1.5",
-    "payload": "^3.19.0",
+    "payload": "^3.20.0",
     "prettier": "^3.4.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -31,12 +34,13 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "drizzle-kit": "^0.30.2",
-    "eslint": "^9",
+    "eslint": "^9.19.0",
     "eslint-config-next": "15.1.5",
     "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-tailwindcss": "^3.18.0",
     "postcss": "^8",
     "prettier-plugin-tailwindcss": "^0.6.11",
-    "tailwindcss": "^3.4.1",
+    "tailwindcss": "^4.0.3",
     "typescript": "^5"
   }
 }

@@ -1,5 +1,15 @@
 @import 'tailwindcss';
 
+:root {
+  --sage-green: 138, 163, 153;
+  --midnight-teal: 0, 28, 38;
+  --deep-navy-black: 0, 22, 27;
+  --soft-seafoam-teal: 30, 54, 64;
+  --muted-gold: 201, 154, 106;
+  --anthracite-gray: 46, 46, 46;
+  --off-white: 245, 245, 245;
+}
+
 @theme {
   --color-*: initial;
   --color-transparent: transparent;
@@ -57,43 +67,29 @@
   ::backdrop,
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
+
+    svg {
+      @apply inline-block h-6 w-6;
+    }
+
+    a {
+      @apply align-middle hover:underline;
+    }
+
+    .lucide {
+      stroke-width: 1px;
+    }
+
+    ::-webkit-scrollbar {
+      @apply w-2;
+    }
+
+    ::-webkit-scrollbar-track {
+      @apply bg-transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      @apply bg-base-1 hover:bg-overlay rounded-lg;
+    }
   }
-}
-
-:root {
-  --sage-green: 138, 163, 153;
-  --midnight-teal: 0, 28, 38;
-  --deep-navy-black: 0, 22, 27;
-  --soft-seafoam-teal: 30, 54, 64;
-  --muted-gold: 201, 154, 106;
-  --anthracite-gray: 46, 46, 46;
-  --off-white: 245, 245, 245;
-}
-
-body {
-  @apply overflow-x-hidden;
-}
-
-svg {
-  @apply inline-block h-6 w-6;
-}
-
-a {
-  @apply align-middle hover:underline;
-}
-
-.lucide {
-  stroke-width: 1px;
-}
-
-::-webkit-scrollbar {
-  @apply w-2;
-}
-
-::-webkit-scrollbar-track {
-  @apply bg-transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  @apply rounded-lg bg-base-1 hover:bg-overlay;
 }

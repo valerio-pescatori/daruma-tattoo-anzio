@@ -1,7 +1,7 @@
 'use client';
 import clsx, { ClassValue } from 'clsx';
 import useEmblaCarousel from 'embla-carousel-react';
-import { ChevronLeft, ChevronRight, Expand } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { DynamicIcon } from 'lucide-react/dynamic';
 import Image, { StaticImageData } from 'next/image';
 import { useMemo, useState } from 'react';
@@ -19,18 +19,6 @@ export function EmblaCarousel({ images, className }: EmblaCarouselProps) {
   const carouselMain = useMemo(
     () => (
       <div className={clsx('relative overflow-hidden rounded-lg shadow-lg', className)}>
-        {/* shadow */}
-        <div className="pointer-events-none absolute top-0 left-0 z-10 size-full shadow-inner" />
-        {/* fullscreen button */}
-        <button onClick={() => setIsFullscreen(!isFullscreen)} className={clsx(btnClass, 'top-2 right-2 z-20')}>
-          <DynamicIcon name={isFullscreen ? 'x' : 'expand'} className="size-4" />
-        </button>
-        {/* left button */}
-        <button
-          onClick={() => emblaApi?.scrollPrev()}
-          className={clsx(btnClass, 'top-1/2 left-2 z-20 -translate-y-1/2')}>
-          <ChevronLeft />
-        </button>
         {/* carousel */}
         <div ref={emblaRef}>
           <div className="flex">
@@ -41,6 +29,22 @@ export function EmblaCarousel({ images, className }: EmblaCarouselProps) {
             ))}
           </div>
         </div>
+
+        {/* shadow */}
+        <div className="pointer-events-none absolute top-0 left-0 z-10 size-full shadow-inner" />
+
+        {/* fullscreen button */}
+        <button onClick={() => setIsFullscreen(!isFullscreen)} className={clsx(btnClass, 'top-2 right-2 z-20')}>
+          <DynamicIcon name={isFullscreen ? 'x' : 'expand'} className="size-4" />
+        </button>
+
+        {/* left button */}
+        <button
+          onClick={() => emblaApi?.scrollPrev()}
+          className={clsx(btnClass, 'top-1/2 left-2 z-20 -translate-y-1/2')}>
+          <ChevronLeft />
+        </button>
+
         {/* right button */}
         <button
           onClick={() => emblaApi?.scrollNext()}

@@ -2,6 +2,7 @@
 
 :root {
   --sage-green: 138, 163, 153;
+  --sage-mist: 162, 176, 154;
   --midnight-teal: 0, 28, 38;
   --deep-navy-black: 0, 22, 27;
   --soft-seafoam-teal: 30, 54, 64;
@@ -18,12 +19,14 @@
   --color-base-2: rgba(var(--deep-navy-black), 1);
   --color-overlay: rgba(var(--soft-seafoam-teal), 1);
   --color-accent: rgba(var(--sage-green), 1);
+  --color-accent-2: rgba(var(--sage-mist), 1);
   --color-muted-gold: rgba(var(--muted-gold), 1);
   --color-anthracite-gray: rgba(var(--anthracite-gray), 1);
 
   --z-index-401: 401;
 
-  --shadow-inner: inset 0 0 25 0 rgba(0, 0, 0, 0.5);
+  --shadow-inner: inset 0 0 50px 0 #000;
+  --shadow-gold: 0 0 20px 0 rgba(201, 168, 106, 0.2);
 
   --font-sans: var(--font-cormorant-garamond);
   --font-go3v2: var(--font-go3v2), sans-serif;

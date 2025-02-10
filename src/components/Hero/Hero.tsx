@@ -5,7 +5,7 @@ import { ChevronsDown } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <header className="bg-base-1 h-svh scroll-mt-20">
+    <header className="bg-base-1 h-lvh scroll-mt-20">
       <div className="relative">
         {/* shadow */}
         <div id="shadow" className="from-base-1 absolute inset-0 -bottom-px bg-gradient-to-t to-70%" />
